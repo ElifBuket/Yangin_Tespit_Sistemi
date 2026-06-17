@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏠 IoT Yangın Tespit Sistemi
 
 ESP32 tabanlı, RFID kontrollü, MQ2 gaz sensörlü, gerçek zamanlı izleme ve email bildirimleri içeren tam kapsamlı bir IoT güvenlik sistemi.
@@ -677,3 +678,6 @@ Bu sistem **eğitim amaçlıdır**. Kritik güvenlik uygulamaları için:
 ---
 
 **🎉 Başarılar dileriz!**
+=======
+# Yangin_Tespit_Sistemi
+>>>>>>> 4262544ef408927cbc735251be7ff517036a7692
