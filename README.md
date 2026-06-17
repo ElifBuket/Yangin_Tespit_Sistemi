@@ -1,1 +1,1 @@
-# Yang-n_Tespit_Sistemi
+# Yangin_Tespit_Sistemi
