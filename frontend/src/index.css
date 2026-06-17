@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-100;
+    background: #020817;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(20,184,166,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(99,102,241,0.08) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-slate-900 font-bold py-2.5 px-5 rounded-xl shadow-lg shadow-teal-500/20 transition-all duration-200 hover:shadow-teal-500/30 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 font-semibold py-2.5 px-5 rounded-xl transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-500 text-white font-semibold py-2.5 px-5 rounded-xl shadow-lg shadow-red-500/20 transition-all duration-200;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-slate-800/80 border border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-teal-500 text-slate-100 placeholder-slate-500 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 shadow-xl shadow-black/20;
+  }
+
+  .card-glass {
+    @apply bg-white/[0.03] backdrop-blur-md border border-white/[0.08] rounded-2xl p-6 shadow-2xl;
+  }
+
+  .stat-card {
+    @apply relative overflow-hidden bg-slate-900/80 border border-slate-700/50 rounded-2xl p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .device-card {
+    @apply relative overflow-hidden rounded-2xl border transition-all duration-300;
+  }
+
+  .badge-online {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-teal-500/15 text-teal-400 border border-teal-500/25;
+  }
+
+  .badge-offline {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-500 border border-slate-700;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-red-500/15 text-red-400 border border-red-500/25;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-500/15 text-amber-400 border border-amber-500/25;
+  }
+
+  .badge-safe {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-teal-500/15 text-teal-400 border border-teal-500/25;
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 20px rgba(20,184,166,0.3), 0 0 60px rgba(20,184,166,0.1);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239,68,68,0.3), 0 0 60px rgba(239,68,68,0.1);
+  }
+
+  .pulse-dot {
+    @apply relative inline-flex;
+  }
+
+  .pulse-dot::before {
+    content: '';
+    @apply absolute inset-0 rounded-full animate-ping opacity-75;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.05) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.float { animation: float 3s ease-in-out infinite; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
+.fade-in-up-1 { animation: fadeInUp 0.4s ease-out 0.1s both; }
+.fade-in-up-2 { animation: fadeInUp 0.4s ease-out 0.2s both; }
+.fade-in-up-3 { animation: fadeInUp 0.4s ease-out 0.3s both; }
+.fade-in-up-4 { animation: fadeInUp 0.4s ease-out 0.4s both; }
